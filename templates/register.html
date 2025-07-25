@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+    /* CSS for box layout */
+    #registrationContainer {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 300px; /* Adjust width as needed */
+        margin: 0 auto; /* Center the box horizontally */
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input {
+        width: calc(100% - 10px); /* Adjust width as needed */
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<div id="registrationContainer">
+    <h2>Register</h2>
+    <!-- Registration form -->
+    <form id="registrationForm" action="register.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<div id="registrationSuccess" style="display: none;">
+    <p>Successfully registered!</p>
+    <!-- You can add additional content or redirection links here -->
+</div>
+
+<script>
+    // JavaScript to handle registration success
+    // Assuming you're using AJAX to handle form submission, this is just a placeholder
+    // You should replace it with your actual logic
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        // Perform registration process here, for demonstration purpose just showing success message
+        document.getElementById("registrationContainer").style.display = "none";
+        document.getElementById("registrationSuccess").style.display = "block";
+    });
+</script>
+
+</body>
+</html>

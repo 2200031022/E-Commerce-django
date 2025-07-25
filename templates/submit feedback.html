@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Details</title>
+<style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .feedback-section {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #007bff; /* Title color */
+        margin-bottom: 20px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    ol {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 30px;
+        background-color: #f9f9f9; /* Different background color for questions */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+        color: #555; /* Color for questions */
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .feedback-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .feedback-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="feedback-section">
+    <h2>Survey Details</h2>
+    <form id="feedback-form" action="feedback_submit.php" method="POST">
+        <ol>
+            <!-- Your questions go here -->
+        </ol>
+        <button type="submit" class="feedback-btn">Submit Feedback</button>
+    </form>
+    <p id="feedback-response" style="display:none; color: green; text-align: center;">Response is submitted</p>
+</div>
+
+<script>
+    // JavaScript to display response message after form submission
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        document.getElementById('feedback-response').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

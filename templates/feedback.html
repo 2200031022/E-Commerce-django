@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Details</title>
+<style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .feedback-section {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #007bff; /* Title color */
+        margin-bottom: 20px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    ol {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 30px;
+        background-color: #f9f9f9; /* Different background color for questions */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+        color: #555; /* Color for questions */
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .feedback-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .feedback-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="feedback-section">
+    <h2>Survey Details</h2>
+    <form id="feedback-form" action="submit_feedback.html" method="POST">
+        <ol>
+            <li>
+                <label for="q1">How satisfied are you with our website's user interface?</label><br>
+                <input type="radio" id="q1" name="q1" value="Very satisfied"> Very satisfied
+                <input type="radio" id="q1" name="q1" value="Satisfied"> Satisfied
+                <input type="radio" id="q1" name="q1" value="Neutral"> Neutral
+                <input type="radio" id="q1" name="q1" value="Dissatisfied"> Dissatisfied
+                <input type="radio" id="q1" name="q1" value="Very dissatisfied"> Very dissatisfied
+            </li>
+            <li>
+                <label for="q2">How likely are you to recommend our website to others?</label><br>
+                <input type="radio" id="q2" name="q2" value="Very likely"> Very likely
+                <input type="radio" id="q2" name="q2" value="Likely"> Likely
+                <input type="radio" id="q2" name="q2" value="Neutral"> Neutral
+                <input type="radio" id="q2" name="q2" value="Unlikely"> Unlikely
+                <input type="radio" id="q2" name="q2" value="Very unlikely"> Very unlikely
+            </li>
+            <!-- Add more questions here -->
+            <li>
+                <label for="q3">How would you rate the variety of products available on our website?</label><br>
+                <input type="radio" id="q3" name="q3" value="Excellent"> Excellent
+                <input type="radio" id="q3" name="q3" value="Very good"> Very good
+                <input type="radio" id="q3" name="q3" value="Good"> Good
+                <input type="radio" id="q3" name="q3" value="Fair"> Fair
+                <input type="radio" id="q3" name="q3" value="Poor"> Poor
+            </li>
+            <li>
+                <label for="q4">How easy was it to find the products you were looking for?</label><br>
+                <input type="radio" id="q4" name="q4" value="Very easy"> Very easy
+                <input type="radio" id="q4" name="q4" value="Easy"> Easy
+                <input type="radio" id="q4" name="q4" value="Neutral"> Neutral
+                <input type="radio" id="q4" name="q4" value="Difficult"> Difficult
+                <input type="radio" id="q4" name="q4" value="Very difficult"> Very difficult
+            </li>
+            <li>
+                <label for="q5">How satisfied are you with the prices of the products?</label><br>
+                <input type="radio" id="q5" name="q5" value="Very satisfied"> Very satisfied
+                <input type="radio" id="q5" name="q5" value="Satisfied"> Satisfied
+                <input type="radio" id="q5" name="q5" value="Neutral"> Neutral
+                <input type="radio" id="q5" name="q5" value="Dissatisfied"> Dissatisfied
+                <input type="radio" id="q5" name="q5" value="Very dissatisfied"> Very dissatisfied
+            </li>
+            <li>
+                <label for="q6">How would you rate the quality of the products you purchased?</label><br>
+                <input type="radio" id="q6" name="q6" value="Excellent"> Excellent
+                <input type="radio" id="q6" name="q6" value="Very good"> Very good
+                <input type="radio" id="q6" name="q6" value="Good"> Good
+                <input type="radio" id="q6" name="q6" value="Fair"> Fair
+                <input type="radio" id="q6" name="q6" value="Poor"> Poor
+            </li>
+            <li>
+                <label for="q7">How satisfied are you with the delivery time of your orders?</label><br>
+                <input type="radio" id="q7" name="q7" value="Very satisfied"> Very satisfied
+                <input type="radio" id="q7" name="q7" value="Satisfied"> Satisfied
+                <input type="radio" id="q7" name="q7" value="Neutral"> Neutral
+                <input type="radio" id="q7" name="q7" value="Dissatisfied"> Dissatisfied
+                <input type="radio" id="q7" name="q7" value="Very dissatisfied"> Very dissatisfied
+            </li>
+            <li>
+                <label for="q8">How likely are you to make another purchase from our website?</label><br>
+                <input type="radio" id="q8" name="q8" value="Very likely"> Very likely
+                <input type="radio" id="q8" name="q8" value="Likely"> Likely
+                <input type="radio" id="q8" name="q8" value="Neutral"> Neutral
+                <input type="radio" id="q8" name="q8" value="Unlikely"> Unlikely
+                <input type="radio" id="q8" name="q8" value="Very unlikely"> Very unlikely
+            </li>
+            <li>
+                <label for="q9">How likely are you to recommend our website to others?</label><br>
+                <input type="radio" id="q9" name="q9" value="Very likely"> Very likely
+                <input type="radio" id="q9" name="q9" value="Likely"> Likely
+                <input type="radio" id="q9" name="q9" value="Neutral"> Neutral
+                <input type="radio" id="q9" name="q9" value="Unlikely"> Unlikely
+                <input type="radio" id="q9" name="q9" value="Very unlikely"> Very unlikely
+            </li>
+            <li>
+                <label for="q10">How satisfied are you with our customer service?</label><br>
+                <input type="radio" id="q10" name="q10" value="Very satisfied"> Very satisfied
+                <input type="radio" id="q10" name="q10" value="Satisfied"> Satisfied
+                <input type="radio" id="q10" name="q10" value="Neutral"> Neutral
+                <input type="radio" id="q10" name="q10" value="Dissatisfied"> Dissatisfied
+                <input type="radio" id="q10" name="q10" value="Very dissatisfied"> Very dissatisfied
+            </li>
+            <li>
+                <label for="q11">Do you have any suggestions or comments for improving our website or services?</label><br>
+                <textarea id="q11" name="q11" rows="4" cols="50"></textarea>
+            </li>
+        </ol>
+        <button type="submit" class="feedback-btn">Submit Feedback</button>
+    </form>
+</div>
+
+<script>
+    // JavaScript to redirect to submit_feedback.html after form submission
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        window.location.href = 'submit_feedback.html'; // Redirect to submit_feedback.html
+    });
+</script>
+
+</body>
+</html>
